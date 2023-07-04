@@ -151,7 +151,13 @@ const Items = () => {
             </Form.Item>
 
             <Form.Item name="category" label="Category">
-              <Input />
+              <Select>
+                <Select.Option value="Vegetables">Vegetables</Select.Option>
+                <Select.Option value="Grocery">Grocery</Select.Option>
+                <Select.Option value="Meat">Meat</Select.Option>
+                <Select.Option value="Fish">Fish</Select.Option>
+                <Select.Option value="Spice">Spice</Select.Option>
+              </Select>
             </Form.Item>
 
             <div className="d-flex justify-content-end">

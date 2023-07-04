@@ -4,10 +4,40 @@ import DefaultLayout from "../components/DefaultLayout";
 import { Col, Row } from "antd";
 import Item from "../components/Item";
 import "../resourses/items.css";
+import { useDispatch } from "react-redux";
 
 function Homepage() {
   const [itemsData, setItemsData] = useState([]);
-  const [selectedCategory, setSelectedCategoty] = useState("fruits");
+  const [selectedCategory, setSelectedCategory] = useState("Vegetables");
+
+  const categories = [
+    {
+      name: "Vegetables",
+      imageUrl:
+        "https://th.bing.com/th/id/OIP.fCTQp7tkOlEa3YRx6tPGxgHaDz?pid=ImgDet&w=650&h=334&rs=1",
+    },
+    {
+      name: "Grocery",
+      imageUrl:
+        "https://th.bing.com/th/id/OIP.KXu6ujsHEcXAAOG342v8VQHaHa?pid=ImgDet&rs=1",
+    },
+    {
+      name: "Meat",
+      imageUrl:
+        "https://th.bing.com/th/id/OIP.UfLrAwdYUVHB-OQ7px3fBwHaGC?pid=ImgDet&w=1800&h=1468&rs=1",
+    },
+    {
+      name: "Fish",
+      imageUrl:
+        "https://mygroceryph.com/pub/media/catalog/category/Fresh_fish_Seafood.jpg",
+    },
+    {
+      name: "Spice",
+      imageUrl:
+        "https://th.bing.com/th/id/OIP.NZyK-yGBO_CjsQOW3DoD0QHaHa?pid=ImgDet&rs=1",
+    },
+  ];
+  const dispatch = useDispatch();
 
   const getAllItems = () => {
     axios
@@ -29,15 +59,17 @@ function Homepage() {
   return (
     <DefaultLayout>
       <div className="d-flex categories">
-        {itemsData.map((category) => {
+        {categories.map((category) => {
           return (
             <div
-              onClick={() => setSelectedCategoty(category.category)}
+              key={category.name}
               className={`d-flex category ${
-                selectedCategory === category.category && "selected-category"
+                selectedCategory === category.name && category
               }`}
+              onClick={() => setSelectedCategory(category.name)}
             >
-              <h4>{category.category}</h4>
+              <h4>{category.name}</h4>
+              <img src={category.imageUrl} height="50" width="80" alt="" />
             </div>
           );
         })}

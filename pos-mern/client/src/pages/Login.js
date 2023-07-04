@@ -33,7 +33,7 @@ function Login() {
         <Col lg={8} xs={22}>
           <Form layout="vertical" onFinish={onFinish}>
             <h1>
-              <b>Supper Shop Login</b>
+              <b>Ponno Login</b>
             </h1>
             <hr />
             <h3>Login</h3>

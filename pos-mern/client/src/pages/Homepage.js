@@ -64,7 +64,7 @@ function Homepage() {
             <div
               key={category.name}
               className={`d-flex category ${
-                selectedCategory === category.name && category
+                selectedCategory === category.name && `selected-category`
               }`}
               onClick={() => setSelectedCategory(category.name)}
             >

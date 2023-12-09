@@ -5,6 +5,7 @@ import { Col, Row } from "antd";
 import Item from "../components/Item";
 import "../resourses/items.css";
 import { useDispatch } from "react-redux";
+import "../resourses/home-thambail.css";
 
 function Homepage() {
   const [itemsData, setItemsData] = useState([]);
@@ -58,6 +59,7 @@ function Homepage() {
 
   return (
     <DefaultLayout>
+      <div className="home-thambail"></div>
       <div className="d-flex categories">
         {categories.map((category) => {
           return (

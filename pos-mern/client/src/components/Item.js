@@ -10,7 +10,7 @@ function Item({ item }) {
 
   return (
     <div className="item">
-      <img src={item.image} alt="" height="100" width="100" />
+      <img src={item.image} alt="" />
       <h4 className="name">{item.name}</h4>
       <h4 className="item.price">
         <b>price: </b>${item.price}

@@ -6,6 +6,9 @@ import { EyeOutlined } from "@ant-design/icons";
 import { Button, message, Modal, Table } from "antd";
 import { useReactToPrint } from "react-to-print";
 import { DeleteOutlined } from "@ant-design/icons";
+import DemoDualAxes from "./lineChart";
+import DemoPie from "./pieChart";
+import "../resourses/chart.css";
 
 function Bills() {
   const componentRef = useRef();
@@ -209,6 +212,15 @@ function Bills() {
           </div>
         </Modal>
       )}
+      <h4 className="dark mt-2">Total Sales</h4>
+      <div className="d-flex">
+        <div className="piechart">
+          <DemoPie />
+        </div>
+        <div className="linechart">
+          <DemoDualAxes />
+        </div>
+      </div>
     </DefaultLayout>
   );
 }

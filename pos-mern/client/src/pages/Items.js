@@ -46,6 +46,7 @@ const Items = () => {
       title: "Name",
       dataIndex: "name",
     },
+
     {
       title: "Image",
       dataIndex: "image",
@@ -57,6 +58,7 @@ const Items = () => {
       title: "Price",
       dataIndex: "price",
     },
+
     {
       title: "Category",
       dataIndex: "category",
@@ -143,6 +145,7 @@ const Items = () => {
             <Form.Item name="name" label="Name">
               <Input />
             </Form.Item>
+
             <Form.Item name="price" label="Price">
               <Input />
             </Form.Item>

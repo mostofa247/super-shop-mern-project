@@ -3,6 +3,11 @@
     padding: 15px;
     margin-top: 20px;
 }
+
+.item img {
+    height: 250px;
+    width: 250px;
+}
 .item:hover{
      transform: scale(1.05);
      transition: all 0.3s;

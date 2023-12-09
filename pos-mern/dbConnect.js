@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-const URL = "mongodb+srv://team:team123@cluster0.og3gvf8.mongodb.net/shopdb";
+const URL =
+  "mongodb+srv://team1234:team1234@cluster0.ez2x2hw.mongodb.net/shopdb";
 mongoose.set("strictQuery", true);
 mongoose.connect(URL);
 
